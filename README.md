@@ -63,7 +63,7 @@ The goal is to create an **automated, intelligent nutrition guide** that helps p
 
 ### 1) Clone the repository
 
-- `git clone https://github.com/your-username/Nutrition-AI.git`
+- `git clone https://github.com/gashutosh2501/Nutrition-AI.git`
 - `cd Nutrition-AI`
 
 ### 2) Prerequisites
