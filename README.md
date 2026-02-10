@@ -59,9 +59,42 @@ The goal is to create an **automated, intelligent nutrition guide** that helps p
 
 ---
 
-## ⚙️ Installation & Setup
-
-### 1️⃣ Clone the Repository
-```bash
+Installation & setup
+1) Clone the repository
 git clone https://github.com/your-username/Nutrition-AI.git
 cd Nutrition-AI
+2) Prerequisites
+Python 3.9+
+Node.js 18+
+PostgreSQL (running locally)
+3) Backend (FastAPI)
+Create a virtual environment and install dependencies:
+
+cd backend
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+Create backend/.env with your secrets:
+
+OPENAI_API_KEY=your_api_key_here
+SMTP_APP_PASSWORD=your_gmail_app_password (only required if email features are used)
+Configure the database connection in database/database.py if your local Postgres settings differ.
+
+4) Database (PostgreSQL)
+Create a database named nutrition_db (or update the connection string in database/database.py).
+Run the schema in database/schema.sql to create the meals table.
+5) Run the API
+From the repo root (with the virtual environment active):
+
+uvicorn backend.main:app --reload
+API should be available at http://localhost:8000.
+
+6) Frontend (Vite + React)
+Install dependencies:
+
+cd frontend
+npm install
+Start the dev server:
+
+npm run dev
+Frontend should be available at http://localhost:5173.
